@@ -1,15 +1,27 @@
 :root {
+	/* Кольори тексту */
 	--primary-text-color: #212121;
 	--secondary-text-color: #757575;
 	--accent-color: #2196f3;
 	--white: #ffffff;
 	--footer-contact-text: rgba(255, 255, 255, 0.6);
+	--main-logo-color: #000000;
+
+	/* Кольори фону */
 	--primary-background-color: #ffffff;
 	--secondary-backgroud-color: #f5f4fa;
 	--footer-background-color: #2f303a;
-	--main-logo-color: #000000;
-	--secondary-button-background-color: #f5f4fa;
 	--hero-background-color: #2f303a;
+
+	/* Колір кнопки */
+	--secondary-button-background-color: #f5f4fa;
+
+	/* Інше */
+	--portfolio-header-botoom-line: #ececec;
+
+	/* Сітка */
+	--indent: 30px;
+	--items: 3;
 }
 
 /* колір основго тексту #212121 */
@@ -39,6 +51,20 @@ p {
 	margin: 0;
 }
 
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Контейнер */
+
 .container {
 	margin-right: auto;
 	margin-left: auto;
@@ -50,17 +76,19 @@ p {
 	outline-offset: -2px; */
 }
 
-/*  */
-.list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-/* .container.header {
+.container.header {
+	display: flex;
 	padding-top: 24px;
 	padding-bottom: 25px;
-} */
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-nav-flex {
+	display: flex;
+	align-items: center;
+	gap: 93px;
+}
 
 /* Лого */
 .logo {
@@ -78,6 +106,17 @@ p {
 /* Колір для першої частини лого */
 .logo-web {
 	color: var(--accent-color);
+}
+
+/* Навігація */
+.site-nav {
+	display: flex;
+	gap: 50px;
+}
+
+.header-contact-flex {
+	display: flex;
+	gap: 50px;
 }
 
 /* Посилання в навігації */
@@ -136,6 +175,9 @@ p {
 }
 
 .hero .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 696px;
 }
 
@@ -204,7 +246,7 @@ p {
 }
 
 .button.secondary:hover,
-.button.hover:focus {
+.button.secondary:focus {
 	color: var(--white);
 	background-color: var(--accent-color);
 }
@@ -213,9 +255,21 @@ p {
 	padding-top: 0;
 }
 
+/* Сітка */
+.card-set {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--indent);
+}
+
+.card-set-item {
+	flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
 /* Особливості */
+
 .features.list {
-	width: 270px;
+	--items: 4;
 }
 
 .features .title {
@@ -232,13 +286,38 @@ p {
 	line-height: 1.7;
 }
 
+/* Чим ми займаємося */
+.services-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.services-list {
+	display: flex;
+	flex-direction: row;
+}
+
 /* Наша команда */
 .section.team {
 	background-color: var(--secondary-backgroud-color);
 }
 
-.team-img {
-	margin-bottom: 30px;
+.team.list {
+	--items: 4;
+}
+
+.team-wrap {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.team-list {
+	border-radius: 0px 0px 4px 4px;
+	background-color: var(--primary-background-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team .title {
@@ -249,10 +328,18 @@ p {
 	margin-bottom: 10px;
 }
 
+.team-title {
+	text-align: center;
+}
+
 .team .paragraph {
 	color: var(--secondary-text-color);
 	font-size: 16px;
 	line-height: 1.19;
+}
+
+.team-paragraph {
+	text-align: center;
 }
 
 /* Футер */
@@ -289,17 +376,37 @@ p {
 	color: var(--accent-color);
 }
 
+.footer-container {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.footer-logo {
+	margin-bottom: 20px;
+}
+
 /**
   |============================
   | Сторінка портфоліо
   |============================
 */
+
+.portfolio-header {
+	border-bottom: 1px solid var(--portfolio-header-botoom-line);
+}
+
 /* Фільтр */
 .filter.list {
-	margin-bottom: 34px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 8px;
+
+	margin-bottom: 50px;
 }
 
 /* Портфоліо */
+
 .portfolio .link {
 	color: var(--primary-text-color);
 	text-decoration: none;
@@ -315,6 +422,18 @@ p {
 	font-size: 18px;
 	line-height: 2;
 	letter-spacing: 0.06em;
+}
+
+.portfolio-item-title {
+	margin-bottom: 4px;
+}
+
+.portfolio-list-wrap {
+	border: 1px solid #eeeeee;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 24px;
+	padding-right: 24px;
 }
 
 .visually-hidden {

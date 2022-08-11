@@ -5,17 +5,27 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Портфоліо</title>
+		<!-- Шрифти -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- Нормалізатор -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+			integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- Власні стилі -->
 		<link rel="stylesheet" href="./css/styles.css" />
 	</head>
 	<body class="body">
 		<!-- Навігація -->
-		<header>
+		<header class="portfolio-header">
 			<div class="container header">
-				<nav>
+				<nav class="header-nav-flex">
 					<a href="./index.html" class="logo">
 						<span class="logo-web">Web</span>
 						Studio
@@ -26,7 +36,7 @@
 						<li><a href="" class="link">Контакти</a></li>
 					</ul>
 				</nav>
-				<ul class="list">
+				<ul class="header-contact-flex list">
 					<li><a href="mailto:info@devstudio.com" class="header-contact">info@devstudio.com</a></li>
 					<li><a href="tel:+380961111111" class="header-contact">+38 096 111 11 11</a></li>
 				</ul>
@@ -55,84 +65,103 @@
 						</li>
 					</ul>
 					<!-- Портфоліо -->
-					<ul class="portfolio list">
-						<li>
+					<ul class="portfolio list card-set">
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img
 									src="./images/portfolio-technokriak.jpg"
 									alt="Ноутбук с открытым веб-сайтом Технокряк"
 									width="370"
 								/>
-								<h2 class="title">Технокряк</h2>
+								<div class="portfolio-list-wrap">
+								<h2 class="portfolio-item-title title">Технокряк</h2>
 								<p class="paragraph">Веб-сайт</p>
 							</a>
+							</div>
 						</li>
-						<li>
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img src="./images/portfolio-no-vs-gs.jpg" alt="Постер New Orlean против Golden Star" width="370" />
-								<h2 class="title">Постер New Orlean vs Golden Star</h2>
+								<div class="portfolio-list-wrap">
+								<h2 class="portfolio-item-title title">Постер New Orlean vs Golden Star</h2>
 								<p class="paragraph">Дизайн</p>
 							</a>
+							</div>
 						</li>
-						<li>
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img src="./images/portfolio-seafood.jpg" alt="Эмблема ресторана Seafood" width="370" />
-								<h2 class="title">Ресторан Seafood</h2>
+								<div class="portfolio-list-wrap">
+								<h2 class="portfolio-item-title title">Ресторан Seafood</h2>
 								<p class="paragraph">Додаток</p>
+								</div>
 							</a>
 						</li>
-						<li>
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img src="./images/portfolio-prime.jpg" alt="Полноразмерные наушники в черном цвете" width="370" />
-								<h2 class="title">Проєкт Prime</h2>
+								<div class="portfolio-list-wrap">
+								<h2 class="portfolio-item-title title">Проєкт Prime</h2>
 								<p class="paragraph">Маркетинг</p>
+								</div>
 							</a>
 						</li>
-						<li>
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img src="./images/portfolio-boxes.jpg" alt="Две коробки, серого и белого цвета" width="370" />
-								<h2 class="title">Проєкт Boxes</h2>
+								<div class="portfolio-list-wrap">
+								<h2 class="portfolio-item-title title">Проєкт Boxes</h2>
 								<p class="paragraph">Додаток</p>
+								</div>
 							</a>
 						</li>
-						<li>
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img
 									src="./images/portfolio-inspiration-has-no-borders.jpg"
 									alt="Монитор с открытым сайтом Inspiration has no Borders"
 									width="370"
 								/>
-								<h2 class="title">Inspiration has no Borders</h2>
+								<div class="portfolio-list-wrap">
+								<h2 class="portfolio-item-title title">Inspiration has no Borders</h2>
 								<p class="paragraph">Веб-сайт</p>
+								</div>
 							</a>
 						</li>
-						<li>
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img
 									src="./images/portfolio-limited-edition.jpg"
 									alt="Развернутый журнал Limited Edition"
 									width="370"
 								/>
-								<h2 class="title">Видання Limited Edition</h2>
+								<div class="portfolio-list-wrap">
+									<h2 class="portfolio-item-title title">Видання Limited Edition</h2>
 								<p class="paragraph">Дизайн</p>
+							</div>
+								
 							</a>
 						</li>
-						<li>
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img src="./images/portfolio-lab.jpg" alt="Ярлычок с надписью Label Tag" width="370" />
-								<h2 class="title">Проєкт LAB</h2>
+								<div class="portfolio-list-wrap">
+								<h2 class="portfolio-item-title title">Проєкт LAB</h2>
 								<p class="paragraph">Маркетинг</p>
+								</div>
 							</a>
 						</li>
-						<li>
+						<li class="card-set-item">
 							<a href="" target="_blank" class="link">
 								<img
 									src="./images/portfolio-business.jpg"
 									alt="Ноутбук с открытым приложением Growing Business"
 									width="370"
 								/>
-								<h2 class="title">Growing Business</h2>
+								<div class="portfolio-list-wrap">
+								<h2 class="portfolio-item-title title">Growing Business</h2>
 								<p class="paragraph">Додаток</p>
+								</div>
 							</a>
 						</li>
 					</ul>
@@ -141,8 +170,8 @@
 		</main>
 		<!-- Футер -->
 		<footer class="footer">
-			<div class="container">
-				<a href="./index.html" class="logo">
+			<div class="footer-container container">
+				<a href="./index.html" class="footer-logo logo">
 					<span class="logo-web">Web</span>
 					Studio
 				</a>
